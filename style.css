@@ -1,0 +1,184 @@
+@font-face {
+    font-family: '국립박물관문화재단클래식B';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/국립박물관문화재단클래식B.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: #303030;
+    font-family: '국립박물관문화재단클래식B';
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+}
+
+h1 {
+    color: #e3e3e3;
+    width: 80%;
+    margin: auto;
+    font-size: 22px;
+    line-height: 150%;
+}
+.mdname {
+    color: #a3a3a3;
+    width: 80%;
+    margin: auto;
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+#image-start {
+    width: 90%;
+    margin: auto;
+    z-index: -1;
+}
+.btn-start {
+    width: 70%;
+    height: 80px;
+    margin:auto;
+    background-color: #303030;
+    border-top: 8px solid #ffd21f;
+    border-bottom: 8px solid #ffd21f;
+    border-style: groove;
+    color: #ffd21f;
+    font-size: 1.2rem;
+}
+
+.question{
+    display: none;
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+}
+.progress-bar {
+    background-color: #ffd21f;
+    color: #707070;
+}
+.square{
+    border: 4px solid #ffd21f;
+    width: 8%;
+    margin: auto;
+}
+#title{
+    color: #ffd21f;
+    font-size: 1rem;
+    line-height: 150%;
+    margin-bottom: 0;
+}
+.btn-box {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #303030;
+    border: 8px solid #707070;
+    padding:0;
+}
+.btn-box button:hover{
+    background-color: #ffd21f;
+}
+.btn-question1, .btn-question2{
+    font-size: 0.85rem;
+    color: #e3e3e3;
+    line-height: 150%;
+    padding: 20px;
+}
+.btn-question1 {
+    border-bottom: 2px solid #707070;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+}
+
+.result{
+    display: none;
+    width: 80%;
+    margin: auto;
+    margin-top: 60px;
+}
+h4{
+    color: #e3e3e3;
+    font-size: 1.5rem;
+    line-height: 150%;
+}
+h6{
+    color: #e3e3e3;
+    font-size: 0.9rem;
+    line-height: 150%;
+    margin: 0;
+}
+#img {
+    width: 100%;
+    margin: 0 auto;
+}
+#animal{
+    color: #e3e3e3;
+    font-size: 1rem;
+    line-height: 150%;
+}
+#animal-name{
+    font-size: 1.5rem;
+    line-height: 150%;
+}
+#animal-name, #animal-name2, #animal-name3{
+    color: #ffffff;
+}
+#explain{
+    color: #ffd21f;
+    font-size: 0.9rem;
+    line-height: 190%;
+    width: 110%;
+    margin: auto;
+}
+.friends{
+    display: flex;
+    margin: auto;
+}
+#friends-love, #friends-hate {
+    font-size: 0.85rem;
+}
+.friends-box1{
+    margin-right: 15px;
+}
+.friends-box2{
+    margin-left: 15px;
+}
+#img-min, #img-min2 {
+    width: 100%;
+    margin: 0 auto;
+}
+
+#share {
+    margin: 0 auto;
+}
+#share2{
+    font-size: 1rem;
+}
+.addthis_inline_share_toolbox {
+    margin: 0 auto;
+}
+.btn-reset{
+    width: 100%;
+    margin:auto;
+    color: #e3e3e3;
+    border-top: 8px solid #ffd21f;
+    border-bottom: 8px solid #ffd21f;
+    border-style: groove;
+    font-size: 1.2rem;
+    padding: 10px;
+}
+.kakao_ad {
+    width: 320px;
+    margin: 0 auto;
+}
+.banner {
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    margin: 0 auto;
+}
+.banner-img {
+    width: 300px;
+}

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>유형별 팩폭레터 테스트</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="MBTI 유형별로 알아보는 팩폭레터 테스트">
+    <meta property="og:type" content="website"> 
+    <meta property="og:title" content="유형별 팩폭레터"/>
+    <meta property="og:description" content="이 팩트는 정말 알맞게 폭력적이다!"/>
+    <meta property="og:image" content="http://mbtifactpunch.netlify.app/img/ALL.png"/>
+    <meta property="og:url" content="http://mbtifactpunch.netlify.app/">
+</head>
+<body class="container">
+    <article class="start">
+        <h5 class="mdname mt-5 text-left">유형별 팩폭레터</h5>
+        <h1 class="text-left">이 팩트는 정말<br>알맞게 폭력적이다!</h1>
+        <img id="image-start" class="mt-3" src="img/ALL.png" alt="ALL">
+        <button type="button" class="btn btn-start mt-3" onclick="start();">과몰입 금지 팩폭 테스트</button>    
+    </article>
+    <article class="question">
+        <div class="progress mt-5 mb-5">
+            <div class="progress-bar" role="progressbar" style="width: calc(100/12*1%)"></div>
+        </div>
+        <div class="square"></div>
+        <h2 id="title" class="text-center mt-5 mb-5">문제</h2>
+        <div class="square"></div>
+        <input id="type" type="hidden" value="EI">
+        <div class="btn btn-box mt-5">
+            <button id="A" type="button" class="btn btn-question1">Primary</button>
+            <button id="B" type="button" class="btn btn-question2">Primary</button>    
+        </div>
+    </article>
+    <article class="result">
+        <div class="square"></div>
+        <h4 id="friends-title" class="text-center mt-3 mb-3">나에게 딱 맞는<br><span style="color:#ffd21f;">팩트 </span>총 정리</h4>
+        <div class="square"></div>
+        <img id="img" class="mt-3" src="img/INTJ.png" alt="animal">
+        <h2 id="animal" class="text-center mt-3">동물이름설명</h2>
+        <h2 id="animal-name" class="text-center mb-5">동물이름</h2>
+        <div class="square"></div>
+        <h3 id="explain" class="text-left mt-5 mb-5">설명</h3>
+        <div class="square"></div>
+        <div class="friends text-center mt-3">
+            <div class="friends-box1 text-center">
+                <h6 id="friends-title-min">❤‍🔥<br>환상의 궁합</h6>
+                <img id="img-min" class="mt-2 mb-2" src="img/INTJ.png" alt="animal">
+                <h6 id="friends-love">천생연분 동물 이름</h6>
+                <h6 id="animal-name2" class="text-center">동물이름</h6>  
+            </div>
+            <div class="friends-box2 text-center">
+                <h6 id="friends-title-min">🤮<br>환장의 궁합</h6>
+                <img id="img-min2" class="mt-2 mb-2" src="img/INTJ.png" alt="animal">
+                <h6 id="friends-hate">원수같은 동물 이름</h6>
+                <h6 id="animal-name3" class="text-center">동물이름</h6>   
+            </div>
+        </div>
+        <div class="square mt-5 mb-5"></div>
+        <h4 id="share" class="text-center">친구야, 사실 너는··<br><span style="color:#ffd21f;">친구에게 팩폭 날리기</span></h4>
+        <h6 id="share2" class="text-center mt-3">환상의 궁합 친구 또는<br>환장의 궁합 친구를<br>찾아보세요!</h6>
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+        <div class="addthis_inline_share_toolbox mt-3"></div>
+        <button type="button" class="btn btn-reset mt-5 mb-5" onclick="restart();">이게 나라니··<br>뭔가 잘못됐어··!<br><span style="color:#ffd21f;">다시 검사하기</span></button>
+    </article>
+    <article class="kakao_ad mt-5">
+        <ins class="kakao_ad_area" style="display:none;" 
+        data-ad-unit    = "DAN-4fISLIQEbnr19aH8" 
+        data-ad-width   = "320" 
+        data-ad-height  = "100"></ins>
+    </article>
+    <a class="mt-5 banner" href="https://www.likelion.net/">
+        <img class="banner-img" src="banner.png" alt="banner">
+    </a>
+    <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+    <input type="hidden" id="EI" value="0">
+    <input type="hidden" id="SN" value="0">
+    <input type="hidden" id="TF" value="0">
+    <input type="hidden" id="JP" value="0">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>   
+    <script>
+        var num = 1;
+        var q = {
+            1: {"title": "비상이다.<br>시험장에 도시락을 준비 해왔는데<br>뚜껑이 열리지 않는다!<br>이걸 어쩌지?", "type": "EI", "A": "일단 밖으로 나가서<br>아무나 붙잡고 부탁한다!<br>뚜껑좀 열어주세요.. 뚜껑좀..", "B": "감독관을 찾으러 갈까..?<br>아니, 굶으면 오히려 안졸릴거야.<br>오후 시험 준비나 하자."},
+            2: {"title": "친구들 사이에서 문제가 생겼는데<br>내 선택에 따라서<br>관계가 달라질 수 있다!<br>이때 나는?", "type": "EI", "A": "다른 친구나 가족 등<br>주변 사람에게 상황을 설명해주고<br>어떻게 할지 물어본다.", "B": "이 상황을 어떻게 해결해야 할까?<br>조용히 생각에 잠겨<br>차분히 고민을 해본다."},
+            3: {"title": "누군가 나에게<br>일을 하는 이유에 대해<br>물어본다면,<br>당신의 대답은?", "type": "EI", "A": "일도 재미있지만..<br>일을 해나가면서 얻게 될<br>보상이 기대되기 때문이다.", "B": "일이 재밌긴 하지만..<br>일을 하지 않았을때<br>잃게 될 것들이 있기 때문이다."},
+            4: {"title": "어느날 딱 한번!<br>과거 또는 미래로 시간을<br>조절할 수 있는 기회가 생겼다.<br>어떻게 할까?", "type": "SN", "A": "어린 나로 돌아간다면,<br>인생을 바꿀 수 있을 것 같아!<br>과거로 가자!", "B": "과거는 이미 봤으니 필요없어!<br>난 어떻게 살고 있을까?<br>미래로 가자!"},
+            5: {"title": "박지성에서<br>성을 뗀다면<br>대체 뭐라고<br>불러야 할까?", "type": "SN", "A": "박지성에서 성을 빼면<br>박지 아닌가?<br>박지라고 부르면 될거같은데?", "B": "성씨인 박을 빼나? 아니면<br>지성의 성? 다 빼서 그냥 지?<br>라고 부르면.. 헉 나 천재아냐?"},
+            6: {"title": "일단!<br>아무 생각하지 말고 기다려!<br>라는 말을 들었을때<br>내 머릿속은?", "type": "SN", "A": "아무 생각 하지 말라고?<br>음.. 기다려보자.<br>머릿속이 하얘지며 멍을 때린다.", "B": "아무 생각은.. 아무를 생각하지<br>말라고도 들리는걸? 재밌다!<br>아냐 도화지.. 백지를 상상하자."},
+            7: {"title": "친구가 1박 2일<br>여행을 떠나자고 한다!<br>일단 생각해본다고 한 당신,<br>대답 속 숨겨진 뜻은?", "type": "TF", "A": "여행 갈 시간이 되려나?<br>일단 스케줄 좀 확인해보고<br>얘기해줘야겠다.", "B": "가기 귀찮은데.. 다시 말 안해도<br>생각해본다 했으니까<br>쟤도 이대로 까먹겠지?"},
+            8: {"title": "열심히 준비해서 좋은 성과가<br>나올 거라고 얘기하던 당신,<br>생각보다 나쁜 결과가<br>나와버렸다!", "type": "TF", "A": "'내가 이렇게밖에 못했다고..?'<br>해내지 못했다는 좌절감에<br>고민이 많아진다.", "B": "'이미 잘 됐다고 얘기했는데..<br>이제와서 뭐라고 해?' 주변<br>평판이 신경쓰여 고민이 생긴다."},
+            9: {"title": "단톡방에서 다같이<br>신나게 카톡을 하던 중<br>갑자기 한 친구의<br>답장이 없어졌다!", "type": "TF", "A": "지금 완전 웃긴데ㅋㅋㅋ<br>얘는 왜 갑자기 답장을 안하지?<br>개인 카톡으로 친구를 불러본다.", "B": "갑자기 사라지는 애가 아닌데..<br>혹시 말실수 했나?<br>재빨리 카톡 대화창을 올려본다."},
+            10: {"title": "평소 하던 것과<br>완전히 다른 새로운<br>과제를 받은 당신.<br>어떻게 해결해 나가야 할까?", "type": "JP", "A": "기초 조사를 최대한 꼼꼼하게!<br>그 중에 몇가지 해결책을<br>골라서 진행해야겠다!", "B": "기초 조사는 최대한<br>짧게 끝내고, 일단<br>여러가지 시도를 해봐야겠다!"},
+            11: {"title": "공원에서 산책을 하던 중<br>저 멀리서 강아지 한마리가<br>주인 몰래<br>토사물로 달려가는걸 발견했다!", "type": "JP", "A": "어어 저 강아지 뭐야 쟤 어쩌려고;<br>빨리 주인이 둘 중 하나를<br>치워줘야겠는데?", "B": "헐 저 강아지 좀 봐 어떡해;<br>토사물로 막 뛰어드네..<br>주인은 뭐하는거야?"},
+            12: {"title": "집에서 한시간 거리의 맛집을 가던 중<br>2호점을 발견했다!<br>목적지까지는 30분 남은 상황 속<br>내 선택은?", "type": "JP", "A": "일단 오늘은<br>원래 가던 곳으로 가고,<br>다음에 2호점으로 가봐야겠다.", "B": "더 가까운 곳에<br>2호점이 생겼잖아?<br>오늘은 저기로 가봐야겠다."}
+        }
+        var result = {
+            "ISTJ": {"animal": "구석에서 조용히<br>글 쓰고 있는<br>" ,"animal-name":"틀딱", "explain": "· 유교국가 자손답게 매우 보수적이에요.<br>· 낯가림이 세상에서 제일 심해요.<br>· 스스로에게 너무 가혹할때가 많아요.<br>· 공감 능력이 많이 부족해요.<br>· 너무할만큼 남에게 관심이 없어요.<br>· 다른 사람과 소통 자체를 꺼려해요.<br>· 누군가와 친해지는데 긴 시간이 걸려요.<br>· 다른 사람의 장점보단 단점을 먼저봐요.<br>· 화를 쌓아두다 크게 폭발해버려요.<br>· 변화를 싫어하는 원칙주의자에요.<br>", "img": "img/ISTJ.png", "friends-love": "친구가 없으면<br>나도 없는 인싸충<br>" ,"animal-name2":"개관종", "img-min": "img/ESFP.png", "friends-hate": "니 말도 맞고<br>네 말도 맞다고 하는<br>" ,"animal-name3":"우유부단", "img-min2": "img/ENFJ.png"},
+            "ISFJ": {"animal": "자리에 앉아<br>숙제 보여주는<br>" ,"animal-name":"소심충", "explain": "· 정말 엄청나게 소심해요.<br>· 걱정도 엄청나게 많아요.<br>· 감정적이면서 남 감정은 생각 안해요.<br>· 불편한 부탁도 거절을 못해요.<br>· 남한테 부탁하는건 또 어려워해요.<br>· 줏대없고 남 결정에 끌려다녀요.<br>· 나쁜 기억을 털어내지를 못해요.<br>· 본성은 깐깐징어인데 아닌 척 해요.<br>· 아는 일에 대해서만 눈치가 빨라요.<br>· 스스로의 마음을 자꾸 외면해요.<br>", "img": "img/ISFJ.png", "friends-love": "지하철에서 모히또<br>한 잔 하고있는<br>" ,"animal-name2":"1호선 광인", "img-min": "img/ESTP.png", "friends-hate": "나는 특별한데<br>너는 절대 아냐<br>" ,"animal-name3":"선민의식 갑", "img-min2": "img/ENTJ.png"},
+            "INFJ": {"animal": "미묘한 표정으로<br>내적댄스중인<br>" ,"animal-name":"음침 오타쿠", "explain": "· 이상한 부분에 강박증이 있어요.<br>· 이중인격과 내면에 자아분열이 있어요.<br>· 웃고있지만 속으로는 욕할때가 많아요.<br>· 무슨 말이든 꼬아서 들어요.<br>· 인간관계때문에 스트레스를 크게 받아요.<br>· 쓸데없는 생각이 너무 많아요.<br>· 속을 알 수 없으며 음침해요.<br>· 쓸데없이 자기주관과 고집이 세요.<br>· 작은 일에도 의미부여를 크게 해요.<br>· 친절한척 하지만 칼을 품고 있어요.<br>", "img": "img/INFJ.png", "friends-love": "선생님 말에<br>토달며 비아냥대는<br>" ,"animal-name2":"쿨병 말기", "img-min": "img/ENTP.png", "friends-hate": "지 혼자 답답해서<br>얼굴이 시뻘개진<br>" ,"animal-name3":"젊은 꼰대", "img-min2": "img/ESTJ.png"},
+            "INTJ": {"animal": "하루종일 책상에서<br>내적분노중인<br>" ,"animal-name":"정치질 킹", "explain": "· 사회성은 안드로메다로 버렸어요.<br>· 남 의견은 물어보지만 가뿐히 묵살해요.<br>· 예의는 깍듯이 차리는데 건방져 보여요.<br>· 남에게 상처를 줬으면서 본인은 몰라요.<br>· 독단적이고 답정너 기질이 다분해요.<br>· 극한으로 효율성을 중시해요.<br>· 대게 익숙한 패턴으로만 움직여요.<br>· 다른 사람과 소통하는게 어려워요.<br>· 위로를 못하고 해결책만 뱉어내요.<br>· 다른 사람을 밑으로 생각하며 분석해요.<br>", "img": "img/INTJ.png", "friends-love": "갑자기 하와이에서<br>훌라춤 배워오는<br>" ,"animal-name2":"머가리 꽃밭", "img-min": "img/ENFP.png", "friends-hate": "친구들을 동원해<br>춤 추려 하는<br>" ,"animal-name3":"친목질 왕", "img-min2": "img/ESFJ.png"},
+            "ISTP": {"animal": "말수 적고<br>매일 놀면서도<br>" ,"animal-name":"정신승리 갑", "explain": "· 게을러서 귀찮은 일은 그냥 회피해요.<br>· 리액션에 영혼이라곤 찾을 수가 없어요.<br>· 필요한 일이 아니면 연락을 안해요.<br>· 답장을 하다 갑자기 사라질때가 많아요.<br>· 인생은 그저 흘러간다. 기대를 안해요.<br>· 자신에게도 큰 기대를 안하고 살아요.<br>· 결정할 때 딱히 의견을 내지 않아요.<br>· 공감 능력이 많이 부족해요.<br>· 공상을 하는 N 유형을 이해 못해요.<br>· 그래서 현실을 살라고 잔소리를 해요.<br>", "img": "img/ISTP.png", "friends-love": "친구들을 동원해<br>춤 추려 하는<br>" ,"animal-name2":"친목질 왕", "img-min": "img/ESFJ.png", "friends-hate": "갑자기 하와이에서<br>훌라춤 배워오는<br>" ,"animal-name3":"머가리 꽃밭", "img-min2": "img/ENFP.png"},
+            "ISFP": {"animal": "호기심 많은 척<br>여기저기 떠다니지만<br>" ,"animal-name":"융통성 제로", "explain": "· 하루 종일 그냥 누워만 있어요.<br>· 침대=나, 침대에서 떨어지지를 않아요.<br>· 일을 끝까지 미뤄서 마무리가 어설퍼요.<br>· 남의 잘못에 관대해 쉽게 용서해줘요.<br>· 역시나 호구 취급을 받을 때가 많아요.<br>· 가끔 예측 불가능한 이상 행동을 해요.<br>· 발작버튼이 눌리면 아무도 못말려요.<br>· 본인조차도 본인 통제를 할 수 없어요.<br>· 어느날 갑자기 잠수를 타버려요.<br>· 그래서 주변 사람들을 자주 당황시켜요.<br>", "img": "img/ISFP.png", "friends-love": "지 혼자 답답해서<br>얼굴이 시뻘개진<br>" ,"animal-name2":"젊은 꼰대", "img-min": "img/ESTJ.png", "friends-hate": "선생님 말에<br>토달며 비아냥대는<br>" ,"animal-name3":"쿨병 말기", "img-min2": "img/ENTP.png"},
+            "INFP": {"animal": "조용히 울고있는<br>대외적 이미지<br>" ,"animal-name":"찐따", "explain": "· 대체로 ST 유형들과 가장 맞지 않아요.<br>· 나는 불쌍하다는 사실에 심취해 있어요.<br>· 눈치 없으면서 상처는 쉽게 받아요.<br>· 힘든 티를 내면서도 이유는 말을 안해요.<br>· 먼저 사람을 밀어내고 매일 외로워해요.<br>· 자존감이 낮아요.<br>· 미안하다는 말을 달고 살아요.<br>· 조금만 잘해줘도 쉽게 사람을 믿어요.<br>· 사람들에게 당하는 호구 기질이 있어요.<br>· 우울해서 감정적으로 행동하곤 후회해요.", "img": "img/INFP.png", "friends-love": "나는 특별한데<br>너는 절대 아냐<br>" ,"animal-name2":"선민의식 갑", "img-min": "img/ENTJ.png", "friends-hate": "지하철에서 모히또<br>한 잔 하고있는<br>" ,"animal-name3":"1호선 광인", "img-min2": "img/ESTP.png"},
+            "INTP": {"animal": "도서관에서 혼자<br>이불을 뒤집어 쓴<br>" ,"animal-name":"자기합리화 장인", "explain": "· 눈치가 없어요.<br>· 다른 사람과의 소통을 어려워해요.<br>· 흥미 있는 거 말고는 관심이 없어요.<br>· 말에 요점과 생각이 없을때가 많아요.<br>· 사회적 리액션이 너무 부족해요.<br>· 게으르며 미루기의 끝판왕이에요.<br>· 인간관계에 있어 너무 계산적이에요.<br>· 공감능력이 많이 부족해요.<br>· 완벽하게 못할 거면 시작도 안해요.<br>· 자기주관이 너무 뚜렷해 고집이 세요.<br>", "img": "img/INTP.png", "friends-love": "니 말도 맞고<br>네 말도 맞다고 하는<br>" ,"animal-name2":"우유부단", "img-min": "img/ENFJ.png", "friends-hate": "친구가 없으면<br>나도 없는 인싸충<br>" ,"animal-name3":"개관종", "img-min2": "img/ESFP.png"},
+            "ESTP": {"animal": "지하철에서 모히또<br>한 잔 하고있는<br>" ,"animal-name":"1호선 광인", "explain": "· 가끔 너무 충동적이에요.<br>· 시간 관리를 못해요.<br>· 다음날은 생각 안하고 그냥 놀아요.<br>· 할 말은 하는 성격인데 너무 막해요.<br>· 한 번 멘탈이 터지면 치유를 못해요.<br>· 앞 뒤 상황을 생각하지 않고 행동해요.<br>· 마음을 돈으로 표현하는 스타일이에요.<br>· 통장 잔액은 생각하지 않고 막 써요.<br>· 오늘 일을 내일로 미루고 내일도 안해요.<br>· 당장 놀고 먹는 걸 너무 좋아해요.<br>", "img": "img/ESTP.png", "friends-love": "자리에 앉아<br>숙제 보여주는<br>" ,"animal-name2":"소심충", "img-min": "img/ISFJ.png", "friends-hate": "조용히 울고있는<br>대외적 이미지<br>" ,"animal-name3":"찐따", "img-min2": "img/INFP.png"},
+            "ESFP": {"animal": "친구가 없으면<br>나도 없는 인싸충<br>" ,"animal-name":"개관종", "explain": "· 유혹에 너무 약해요.<br>· 혼자 있으면 쉽게 우울해 해요.<br>· 모두에게 사랑만 받고 싶어해요.<br>· 누군가 나를 싫어하는걸 못참아요.<br>· 진지해야 할 때 진지하지를 못해요.<br>· 계획 좀 세우라고 하면 도망쳐요.<br>· 한 가지 일에 집중을 못해요.<br>· 재미있는 일만 하고싶어해요.<br>· 하기 싫은 일은 끝까지 미뤄요.<br>· 싫다고 해도 자꾸 들러붙어요.<br>", "img": "img/ESFP.png", "friends-love": "구석에서 조용히<br>글 쓰고 있는<br>" ,"animal-name2":"틀딱", "img-min": "img/ISTJ.png", "friends-hate": "도서관에서 혼자<br>이불을 뒤집어 쓴<br>" ,"animal-name3":"자기합리화 장인", "img-min2": "img/INTP.png"},
+            "ENFP": {"animal": "갑자기 하와이에서<br>훌라춤 배워오는<br>" ,"animal-name":"머가리 꽃밭", "explain": "· 너무 시끄러워요.<br>· 주변 눈치를 못보고 혼자서 떠들어요.<br>· 집중력이 부족하고 끈기가 없어요.<br>· 시작한 일을 제대로 끝내지 못해요.<br>· 스트레스에 압도당하는 경우가 많아요.<br>· 감정기복이 심해 주변사람을 당황시켜요.<br>· 거절을 잘 못하고 얼렁뚱땅 넘어가요.<br>· 포커페이스를 못해서 얼굴에 다 티나요.<br>· 나쁜 사람이여도 먼저 쳐내지를 못해요.<br>· 쓸데없는 충동구매를 자주 해요.<br>", "img": "img/ENFP.png", "friends-love": "하루종일 책상에서<br>내적분노중인<br>" ,"animal-name2":"정치질 킹", "img-min": "img/INTJ.png", "friends-hate": "말수 적고<br>매일 놀면서도<br>" ,"animal-name3":"정신승리 갑", "img-min2": "img/ISTP.png"},
+            "ENTP": {"animal": "선생님 말에<br>토달며 비아냥대는<br>" ,"animal-name":"쿨병 말기", "explain": "· 관종이고 자기합리화 장인이에요.<br>· 언뜻 보면 싸가지 없다고 느껴져요.<br>· 하기 싫으면 그냥 안해버려요.<br>· 일은 벌여놓고 제대로 수습을 안해요.<br>· 기분이 안좋을땐 심하게 공격적이에요.<br>· 끈기가 없고 일을 꼼꼼하게 못해요.<br>· 싫은 티를 있는 그대로 팍팍 내요.<br>· 자존심 때문에 모르는 것도 아는척해요.<br>· 극심한 쿨병은 창피하다는걸 몰라요.<br>· 무안할 정도로 남한테 눈치를 줘요.<br>", "img": "img/ENTP.png", "friends-love": "미묘한 표정으로<br>내적댄스중인<br>" ,"animal-name2":"음침 오타쿠", "img-min": "img/INFJ.png", "friends-hate": "호기심 많은 척<br>여기저기 떠다니지만<br>" ,"animal-name3":"융통성 제로", "img-min2": "img/ISFP.png"},
+            "ESTJ": {"animal": "지 혼자 답답해서<br>얼굴이 시뻘개진<br>" ,"animal-name":"젊은 꼰대", "explain": "· 감정 표현이 너무 서툴러요.<br>· 좋아하는 사람 앞에 서면 뚝딱대요.<br>· 변화에 대한 적응이 너무 느려요.<br>· 자연스럽게 꼰대같은 발언을 많이 해요.<br>· 멘탈이 강한데 한 번 터지면 답없어요.<br>· 다른 사람과 생각을 공유하지 못해요.<br>· 혼자 고민하면서 괴로워해요.<br>· 일 중독이고 심하게 보수적이에요.<br>· 자기 자신에게 너무 엄격하게 굴어요.<br>· 누가 당신을 보면 뭘 보냐고 화내요.<br>", "img": "img/ESTJ.png", "friends-love": "호기심 많은 척<br>여기저기 떠다니지만<br>" ,"animal-name2":"융통성 제로", "img-min": "img/ISFP.png", "friends-hate": "미묘한 표정으로<br>내적댄스중인<br>" ,"animal-name3":"음침 오타쿠", "img-min2": "img/INFJ.png"},
+            "ESFJ": {"animal": "친구들을 동원해<br>춤 추려 하는<br>" ,"animal-name":"친목질 왕", "explain": "· 소유욕이 너무 강해요.<br>· 소외되는 걸 못 견뎌요.<br>· 비판과 비난을 구분 못해요.<br>· 남은 잘 챙기면서 스스로는 못 챙겨요.<br>· 걱정도 많고 불안감 수치도 높아요.<br>· 감정 기복이 의외로 심하고 티가 나요.<br>· 부탁도, 거절도 잘 못해요.<br>· 편파적인 태도를 보일때도 있어요.<br>· 혼자 일하는 것을 힘들어 해요.<br>· 쓸데없는 리액션이 너무 많아요.<br>", "img": "img/ESFJ.png", "friends-love": "말수 적고<br>매일 놀면서도<br>" ,"animal-name2":"정신승리", "img-min": "img/ISTP.png", "friends-hate": "하루종일 책상에서<br>내적분노중인<br>" ,"animal-name3":"정치질 킹", "img-min2": "img/INTJ.png"},
+            "ENFJ": {"animal": "니 말도 맞고<br>네 말도 맞다고 하는<br>" ,"animal-name":"우유부단", "explain": "· 다른 사람 말에 너무 민감해요.<br>· 남 일에 지나치게 관심이 많아요.<br>· 쓸데없는 오지랖이 넓어요.<br>· 현실을 직시하는 능력이 부족해요.<br>· 이성적인 판단을 못 내릴 때가 많아요.<br>· 여러 사람의 눈치를 많이 봐요.<br>· 생각보다 귀가 얇아요.<br>· 머리에 잡생각이 너무 많아요.<br>· 감정기복이 심해요.<br>· 한 번 상처받으면 오래가요.<br>", "img": "img/ENFJ.png", "friends-love": "도서관에서 혼자<br>이불을 뒤집어 쓴<br>" ,"animal-name2":"자기합리화 장인", "img-min": "img/INTP.png", "friends-hate": "구석에서 조용히<br>글 쓰고 있는<br>" ,"animal-name3":"틀딱", "img-min2": "img/ISTJ.png"},
+            "ENTJ": {"animal": "나는 특별한데<br>너는 절대 아냐<br>" ,"animal-name":"선민의식 갑", "explain": "· 지독한 개인주의에요.<br>· 성격이 너무 불도저 같아요.<br>· 한 번 멘탈이 터지면 오래가요.<br>· 기분이 안좋을때 지나치게 예민해요.<br>· 뜻대로 일이 안 풀리면 화를 내요.<br>· 뜻을 굽히지 않고 고집이 세요.<br>· 감정적 공감은 못하면서 받기만 원해요.<br>· 남의 말을 잘 안들어요.<br>· 자신의 신념을 남한테도 강요해요.<br>· 과시적인 면이 많아 잘난척을 해요.<br>", "img": "img/ENTJ.png", "friends-love": "조용히 울고있는<br>대외적 이미지<br>" ,"animal-name2":"찐따", "img-min": "img/INFP.png", "friends-hate": "자리에 앉아<br>숙제 보여주는<br>" ,"animal-name3":"소심충", "img-min2": "img/ISFJ.png"}
+        }
+        function start() {
+            $(".start").hide();
+            $(".question").show();
+            next();
+        }
+        $("#A").click(function(){
+            var type = $("#type").val();
+            var preValue = $("#"+type).val();
+            $("#"+type).val(parseInt(preValue)+1);
+            next();
+        });
+        $("#B").click(function(){
+            next();
+        })
+        function next() {
+            if(num == 13){
+                $(".question").hide();
+                $(".result").show();
+                var mbti = "";
+                ($("#EI").val() < 2) ? mbti += "I" : mbti += "E";
+                ($("#SN").val() < 2) ? mbti += "N" : mbti += "S";
+                ($("#TF").val() < 2) ? mbti += "F" : mbti += "T";
+                ($("#JP").val() < 2) ? mbti += "P" : mbti += "J";
+                $("#img").attr("src", result[mbti]["img"]);
+                $("#img-min").attr("src", result[mbti]["img-min"]);
+                $("#img-min2").attr("src", result[mbti]["img-min2"]);
+                $("#animal").html(result[mbti]["animal"]);
+                $("#animal-name").html(result[mbti]["animal-name"]);
+                $("#animal-name2").html(result[mbti]["animal-name2"]);
+                $("#animal-name3").html(result[mbti]["animal-name3"]);
+                $("#explain").html(result[mbti]["explain"]);
+                $("#friends-love").html(result[mbti]["friends-love"]);
+                $("#friends-hate").html(result[mbti]["friends-hate"]);
+            } else {
+                $(".progress-bar").attr('style','width: calc(100/12*'+num+'%)')
+                $("#title").html(q[num]["title"]);
+                $("#type").val(q[num]["type"]);
+                $("#A").html(q[num]["A"]);
+                $("#B").html(q[num]["B"]);
+                num++;
+            }
+        }        
+        function restart() {
+            location.replace("index.html");
+        }
+    </script>
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-61ebadbc9d5ffa55"></script>
+</body>
+</html>
